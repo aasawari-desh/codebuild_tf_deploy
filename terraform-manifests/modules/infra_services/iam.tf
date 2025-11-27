@@ -42,8 +42,8 @@ resource "aws_iam_role" "ec2_s3_access_role" {
 
 #Create a role
 #https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role
-resource "aws_iam_policy" "ec2_policy" {
-  name        = "ec2_policy"
+resource "aws_iam_policy" "ec2_policy_2" {
+  name        = "ec2_policy_2"
   description = "IAM policy for EC2 access"
   
   policy = jsonencode({
@@ -62,8 +62,8 @@ resource "aws_iam_policy" "ec2_policy" {
 
 
 # path.module is the filesystem path of the module where the expression is placed.
-resource "aws_iam_role" "ec2_s3_access_role" {
-  name               = "${var.cloud_env}-ec2-role"
+resource "aws_iam_role" "ec2_s3_access_role2" {
+  name               = "${var.cloud_env}-ec2-role2"
   assume_role_policy = "${file("${path.module}/assumerolepolicy.json")}"
 }
 
@@ -85,6 +85,7 @@ resource "aws_iam_instance_profile" "ec2_profile" {
   name = "${var.cloud_env}-ec2-role"
   role = aws_iam_role.ec2_s3_access_role.name
 }
+
 
 
 
