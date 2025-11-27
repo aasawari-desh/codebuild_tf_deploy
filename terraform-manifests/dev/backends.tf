@@ -12,6 +12,6 @@ terraform {
   backend "s3" {
     bucket = "buckt2025"
     key    = "terraformstates/dev.tfstate"
-    region = "us-east-1"
+    region = "ap-south-1"
   }
 }
