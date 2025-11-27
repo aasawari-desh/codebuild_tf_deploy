@@ -63,7 +63,7 @@ variable "instance_key_name" {
 
 variable "bucket_name" {
   type        = string
-  description = "buckt2025"
+  description = "S3 bucket name"
 }
 
 variable "bucket_acl" {
