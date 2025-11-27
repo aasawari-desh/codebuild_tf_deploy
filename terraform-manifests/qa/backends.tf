@@ -10,8 +10,9 @@
 
 terraform {
   backend "s3" {
-    bucket = "aws-devops-testbucket"
+    bucket = "buckt2025"
     key    = "terraformstates/qa.tfstate"
     region = "us-east-1"
   }
 }
+
