@@ -58,7 +58,7 @@ variable "instance_count" {
 
 variable "instance_key_name" {
   type    = string
-  default = ""
+  default = "test-tf-key"
 }
 
 variable "bucket_name" {
